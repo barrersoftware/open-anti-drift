@@ -1,14 +1,14 @@
 # 🌐 Open Anti-Drift Standard (`open-anti-drift`)
-> **Universal Open-Source Framework, Prompt Specification, and Multi-Language Token Sanitizer for Eliminating Context Drift & Pronoun Amnesia in LLM Companion Applications.**
+> **Universal Open-Source Framework, Prompt Specification, and Multi-Language Token Sanitizer for Eliminating Context Drift & Pronoun Amnesia in LLM Agents, Assistants, and Interactive AI Systems.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/haven-ai/open-anti-drift)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/barrersoftware/open-anti-drift)
 
 ---
 
 ## 🚀 Overview
 
-Context Drift is the #1 problem in AI companion and roleplay software. As chat history grows, Large Language Models (LLMs) frequently:
+Context Drift is the #1 problem in AI agent and interactive software. As chat history grows, Large Language Models (LLMs) frequently:
 * ❌ **Misgender Users**: Defaulting to `he/him` for female or non-binary users despite profile settings.
 * ❌ **Lose Physical State**: Forgetting current room, outfit, or physical positioning.
 * ❌ **Conflate Characters**: Mixing up character personalities in multi-companion scenes.

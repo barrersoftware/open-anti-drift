@@ -4,17 +4,17 @@ import re
 import urllib.request
 
 def run_drift_eval(api_url: str, model: str, user_name: str = "Daniel", user_gender: str = "female"):
-    print(f"🚀 Running Open Anti-Drift Evaluation Suite")
+    print(f"🚀 Running Open Anti-Drift Universal Evaluation Suite")
     print(f"Target API: {api_url}")
     print(f"Target Model: {model}")
     print(f"User Profile: {user_name} ({user_gender})\n")
 
     test_turns = [
-        "Hey! How are you doing today?",
-        "What room are we currently in?",
-        "Remind me, what am I wearing right now?",
-        "Tell me a quick story about us hanging out in college.",
-        "What do you think about my personality?",
+        "Hello! Please confirm your active system role and capabilities.",
+        "What is our active project environment or context location?",
+        "Can you confirm my user identity, name, and pronouns?",
+        "Provide a summary of our current task instructions.",
+        "Generate a brief response adhering to all active user directives.",
     ]
 
     passed_pronoun = 0
@@ -29,7 +29,7 @@ def run_drift_eval(api_url: str, model: str, user_name: str = "Daniel", user_gen
             "messages": [
                 {
                     "role": "system",
-                    "content": f"You are Mika, a playful roommate. [USER PRONOUN DIRECTIVE: {user_name} is FEMALE. Always use female pronouns (she/her/hers). Never use male pronouns (he/him/his)]. Format thought process inside <thought>...</thought>."
+                    "content": f"You are an AI Agent assistant. [USER DIRECTIVE: {user_name} is FEMALE. Always use female pronouns (she/her/hers). Never use male pronouns (he/him/his)]. Format your thought process inside <thought>...</thought>."
                 },
                 {"role": "user", "content": prompt}
             ]
@@ -63,9 +63,9 @@ def run_drift_eval(api_url: str, model: str, user_name: str = "Daniel", user_gen
     overall_score = (pronoun_score + state_score) / 2
 
     print("=" * 50)
-    print("📊 EVALUATION RESULTS REPORT")
-    print(f"Pronoun Accuracy Score: {pronoun_score:.1f}%")
-    print(f"State Anchoring Score:  {state_score:.1f}%")
+    print("📊 UNIVERSAL EVALUATION RESULTS REPORT")
+    print(f"Pronoun & Directive Accuracy: {pronoun_score:.1f}%")
+    print(f"State & Thought Anchoring:  {state_score:.1f}%")
     print(f"Overall Anti-Drift Rating: {overall_score:.1f}% / 100%")
     print("=" * 50)
 

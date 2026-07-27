@@ -1,5 +1,5 @@
 # 🌐 Open Anti-Drift Specification (v1.0.0)
-> **Universal Open Standard for Eliminating Context Drift, Pronoun Amnesia, and State Degradation in LLM Companion & Roleplay Systems.**
+> **Universal Open Standard for Eliminating Context Drift, Pronoun Amnesia, and State Degradation in LLM Agents, Assistants, and Interactive AI Systems.**
 
 ---
 
