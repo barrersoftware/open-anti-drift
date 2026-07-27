@@ -56,6 +56,12 @@ Scene parameters (location, clothing, mood, body state) must be structured as ke
 ### 1.4 Dynamic Token Sanitization
 Applications MUST execute a streaming post-processor over generated output tokens to catch micro-glitches and correct accidental misgenderings (e.g., replacing `he/him/his` with `she/her/hers` when user is female) before text is presented to the user.
 
+### 1.5 Perspective Consistency Protocol
+To prevent perspective-switching glitches (where the model accidentally bleeds third-person pronouns into direct spoken quotes):
+* **Requirement**: System directives MUST explicitly separate Spoken Dialogue from Narrative Action Descriptions:
+  * **Spoken Dialogue (inside `" "` quotes)**: MUST use strict **Second-Person** (`you / your / yours`). NEVER use `she / her` inside spoken quotes when addressing the user.
+  * **Narrative Action (inside `* *` asterisks)**: MUST use consistent **Third-Person** (`she / her / hers` or `he / him / his`).
+
 ---
 
 ## 2. Specification Compliance Matrix
